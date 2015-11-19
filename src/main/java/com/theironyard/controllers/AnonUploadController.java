@@ -54,9 +54,7 @@ public class AnonUploadController {
         }
         if (anonFindList.size() > 5){
             AnonFile removeList = anonFindList.get(0);
-            File tempFile = new File("public", removeList.name);
             files.delete(removeList);
-            tempFile.delete();
         }
         response.sendRedirect("/");
     }
